@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.name {
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.sep { color: var(--text3); font-size: 0.78rem; }
+.copy {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  color: var(--text3);
+}
+.year {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  color: var(--text3);
+}

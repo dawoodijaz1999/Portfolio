@@ -1,0 +1,78 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem;
+  align-items: start;
+}
+.text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.text.visible { opacity: 1; transform: translateY(0); }
+.text p {
+  color: var(--text2);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+.text p strong { color: var(--text); font-weight: 500; }
+.softSkills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.5rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.card.visible { opacity: 1; transform: translateY(0); }
+.cardLabel {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+  margin-bottom: 1.25rem;
+}
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #222;
+}
+.contactRow:last-child { border-bottom: none; padding-bottom: 0; }
+.contactIcon {
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  color: var(--lime);
+  min-width: 18px;
+  padding-top: 2px;
+}
+.contactLabel {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.1rem;
+}
+.contactVal {
+  font-size: 0.82rem;
+  color: #ccc;
+  transition: color var(--transition);
+}
+.contactVal:hover { color: var(--lime); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,38 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-dark);
+  color: #fff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color var(--transition);
+}
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover {
+  border-color: rgba(200,255,0,0.2);
+}
+.cardTitle {
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  color: var(--lime);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}

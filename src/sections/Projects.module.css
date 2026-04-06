@@ -1,0 +1,103 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-dark);
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color var(--transition);
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  border-color: rgba(200,255,0,0.2);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.folderIcon {
+  color: var(--lime);
+  display: flex;
+  align-items: center;
+}
+
+.cardLinks {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.cardLink {
+  color: #666;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+.cardLink:hover {
+  color: var(--lime);
+}
+
+.cardName {
+  font-family: var(--ff-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  transition: color var(--transition);
+}
+.card:hover .cardName {
+  color: var(--lime);
+}
+
+.cardDesc {
+  font-size: 0.82rem;
+  color: #999;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.cardStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+.cardStack span {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+.cardStack span:not(:last-child)::after {
+  content: '\00b7';
+  margin-left: 0.4rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
