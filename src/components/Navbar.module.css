@@ -42,22 +42,6 @@
 }
 .link:hover { color: var(--text); }
 
-.cta {
-  font-family: var(--ff-body);
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #fff;
-  background: var(--bg-dark);
-  padding: 0.55rem 1.25rem;
-  border-radius: var(--radius-pill);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: background var(--transition);
-}
-.cta:hover {
-  background: #222;
-}
 
 .burger {
   display: none;

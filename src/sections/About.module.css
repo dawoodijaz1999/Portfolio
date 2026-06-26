@@ -37,8 +37,10 @@
 .card.visible { opacity: 1; transform: translateY(0); }
 .cardLabel {
   font-family: var(--ff-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--lime);
   margin-bottom: 1.25rem;
 }
